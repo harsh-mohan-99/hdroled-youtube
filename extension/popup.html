@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HDROLED · YouTube</title>
+  <link rel="stylesheet" href="popup.css">
+  <script src="api.js" defer></script>
+  <script src="shared.js" defer></script>
+  <script src="popup.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="header">
+      <div class="logo" aria-hidden="true"><span>H</span></div>
+      <div class="brand"><h1>HDROLED</h1><p>YOUTUBE ENHANCER</p></div>
+      <span class="version">v1.0</span>
+    </header>
+    <section class="hero" aria-label="Picture and sound enhancement">
+      <span class="eyebrow"><i aria-hidden="true"></i> PICTURE × SOUND</span>
+      <h2>Make every<br><em>frame hit.</em></h2>
+      <p>Depth in the picture. Presence in the sound.</p>
+      <span class="spark spark-one" aria-hidden="true">✦</span><span class="spark spark-two" aria-hidden="true">✦</span>
+    </section>
+    <button id="enabled" class="enable" type="button" aria-pressed="false" disabled>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v8M6.6 5.8a8.3 8.3 0 1 0 10.8 0"/></svg>
+      <span id="enabled-label">Enable HDROLED</span><span id="enabled-state">OFF</span>
+    </button>
+    <section class="telemetry" aria-label="Current processing status" aria-live="polite">
+      <div class="status-row"><span class="status-icon" aria-hidden="true">◈</span><div><h3>PICTURE</h3><p id="connection-title">Checking YouTube…</p></div><span id="picture-dot" class="dot" aria-hidden="true"></span></div>
+      <p id="connection-detail" class="detail">Your saved switch is loading.</p>
+      <div class="status-row audio-row"><span class="status-icon sound-icon" aria-hidden="true">≋</span><div><h3>SOUND</h3><p id="audio-status">Waiting for player</p></div></div>
+      <div class="resolution"><span id="source-size">Resolution appears when connected</span></div>
+    </section>
+    <button id="compare" class="compare" type="button" aria-pressed="false" disabled><span aria-hidden="true">◐</span><span id="compare-label">Show original</span><span class="ab">A / B</span></button>
+    <p id="save-status" class="save-status" role="status" hidden></p>
+    <footer><div><span class="made-by">MADE BY</span><strong>Harsh Mohan Sahani</strong></div><span class="codex"><i aria-hidden="true">✦</i> Made with Codex</span></footer>
+    <p class="local"><span aria-hidden="true">●</span> YouTube only <b>·</b> Local processing</p>
+  </main>
+</body>
+</html>
