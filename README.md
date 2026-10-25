@@ -10,7 +10,7 @@
 
 ## Quick start
 
-1. Download this repository with **Code → Download ZIP**, then extract it.
+1. Download a browser ZIP from [Releases](https://github.com/harsh-mohan-99/hdroled-youtube/releases), or use **Code → Download ZIP** for the source, then extract it.
 2. Disable older HDROLED/Luma builds and refresh existing YouTube tabs.
 3. Open your browser's extensions page, turn on Developer mode, and choose **Load unpacked**.
 4. Select this repository's **`extension`** folder—the folder containing `manifest.json`.
@@ -67,7 +67,7 @@ python scripts/package.py
 
 The packager generates Chromium and Firefox ZIPs under `dist/`, with `manifest.json` at each archive root. Load the actual extension ZIPs or source folder; the repository ZIP itself is not a store package.
 
-A read-only GitHub Actions workflow runs these checks after publication. Its remote run has not happened while this project remains local.
+A read-only [GitHub Actions workflow](https://github.com/harsh-mohan-99/hdroled-youtube/actions) runs tests and verifies both browser packages on pushes and pull requests. The initial published source passed these checks.
 
 ```text
 extension/          Browser runtime and dark popup
