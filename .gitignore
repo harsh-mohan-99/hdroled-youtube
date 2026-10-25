@@ -1,0 +1,14 @@
+dist/
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.*
+*.pem
+*.key
+original-display.json
+session.json
+stop-session.signal
+HDROLED-PC*/
+*browser-profile*/

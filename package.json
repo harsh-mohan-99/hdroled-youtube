@@ -1,0 +1,9 @@
+{
+  "name": "hdroled-youtube",
+  "version": "1.0.0",
+  "private": true,
+  "description": "YouTube-only picture and sound enhancement by Harsh Mohan Sahani, made with Codex",
+  "license": "MIT",
+  "scripts": {"test": "node --test --test-isolation=none tests/*.test.cjs"},
+  "engines": {"node": ">=22.15.0"}
+}
