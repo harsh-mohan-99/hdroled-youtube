@@ -1,14 +1,12 @@
-# Privacy
+# Privacy — v2.0 Featured
 
-HDROLED 1.1 runs only on top-level `https://www.youtube.com/*` and `https://m.youtube.com/*` pages.
+HDROLED runs only on top-level `www.youtube.com` and `m.youtube.com` HTTPS pages.
 
-- Saves local picture/sound on/off preferences, separate picture/sound strengths, original/bypass and a derived enabled flag for compatibility with the 1.0 setting.
-- Temporarily reads player/source dimensions, browser-reported screen dimensions and processing state for its popup.
-- Processes supported audio locally using Web Audio. It does not request microphone access, record audio, capture the screen or upload media.
-- Does not collect browsing history, account information, analytics or telemetry.
-- Does not use accounts, backend services, cookies, external fonts or remote code.
-- Does not change power plans, battery settings, system volume, drivers, monitor calibration, HDR mode or operating-system themes. All picture/audio treatment belongs to the currently accessible YouTube page.
+- Session storage keeps tab IDs, page keys, boost levels, auto preferences, revisions and at most 20 page states per tab. States are removed on tab close. No persistent watch-history list is created.
+- Page titles, browser screen/video sizes, playback counters and responsiveness samples are used locally.
+- Logical processor count and optional coarse device memory inform a fractional initial effect level. A temporary WebGL context reads the available renderer and is immediately released. No audio-device enumeration, microphone access, Windows driver queries or native helper are used. Unavailable driver rows are hidden.
+- No hardware information, media or browsing data is uploaded. No analytics, accounts, recording, capture, remote code or remote fonts.
+- Permission scope remains storage plus static YouTube access. The floating controls are a page panel, with no new browser window or all-sites permission.
+- No drivers, registry settings, system themes/volume, physical HDR mode, monitor calibration, battery policy or power plans are modified. PC-wide performance is not measured.
 
-YouTube and the browser still make their ordinary requests independently. Existing OS/GPU/monitor settings can influence appearance; HDROLED neither reads nor restores those settings.
-
-The build/package scripts only read project files and write local ZIPs. No standalone PC display helper, calibration backup, driver installer or registry script is part of this repository or its extension packages.
+YouTube/browser network activity continues independently. Local preview harnesses and PC helpers are excluded from extension packages.

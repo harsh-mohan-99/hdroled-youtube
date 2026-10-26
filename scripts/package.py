@@ -1,8 +1,10 @@
 from pathlib import Path
 import json
 import zipfile
+import runpy
 
 root = Path(__file__).resolve().parent.parent
+runpy.run_path(str(root / 'scripts/build-panel.py'))
 source = root / 'extension'
 version = json.loads((source / 'manifest.json').read_text(encoding='utf-8'))['version']
 label = '.'.join(version.split('.')[:2])

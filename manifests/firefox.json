@@ -1,13 +1,13 @@
 {
   "manifest_version": 3,
-  "name": "HDROLED — Lighter",
-  "version": "1.2.0",
+  "name": "HDROLED — Featured",
+  "version": "2.0.0",
   "description": "YouTube picture depth, fuller bass and clearer dialogue with one-click original comparison.",
   "permissions": [
     "storage"
   ],
   "action": {
-    "default_title": "HDROLED · Lighter",
+    "default_title": "HDROLED · Featured",
     "default_popup": "popup.html",
     "default_icon": {
       "16": "icons/icon-16.png",
@@ -31,8 +31,17 @@
       "js": [
         "api.js",
         "shared.js",
+        "featured.js",
         "audio.js",
-        "content.js"
+        "hardware.js",
+        "media.js",
+        "notices.js",
+        "client.js",
+        "fade.js",
+        "ui.js",
+        "panel-template.js",
+        "panel.js",
+        "featured-content.js"
       ],
       "run_at": "document_idle",
       "all_frames": false
@@ -51,5 +60,15 @@
         ]
       }
     }
+  },
+  "background": {
+    "scripts": [
+      "api.js",
+      "shared.js",
+      "featured.js",
+      "coordinator.js",
+      "background.js"
+    ],
+    "persistent": false
   }
 }

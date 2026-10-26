@@ -1,6 +1,6 @@
 (function(root){
   'use strict';
-  const clampStrength=value=>typeof value==='number'&&Number.isFinite(value)?Math.round(Math.max(0,Math.min(100,value))):100;
+  const clampStrength=value=>typeof value==='number'&&Number.isFinite(value)?Math.round(Math.max(0,Math.min(100,value))*10)/10:100;
   const normalizeSettings=value=>{
     const legacy=value?.enabled===true;
     const pictureEnabled=typeof value?.pictureEnabled==='boolean'?value.pictureEnabled:legacy;
