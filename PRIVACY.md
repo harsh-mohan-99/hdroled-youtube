@@ -1,8 +1,8 @@
 # Privacy
 
-HDROLED 1.0 runs only on top-level `https://www.youtube.com/*` and `https://m.youtube.com/*` pages.
+HDROLED 1.1 runs only on top-level `https://www.youtube.com/*` and `https://m.youtube.com/*` pages.
 
-- Saves two local preferences: enabled and original/bypass.
+- Saves local picture/sound on/off preferences, separate picture/sound strengths, original/bypass and a derived enabled flag for compatibility with the 1.0 setting.
 - Temporarily reads player/source dimensions, browser-reported screen dimensions and processing state for its popup.
 - Processes supported audio locally using Web Audio. It does not request microphone access, record audio, capture the screen or upload media.
 - Does not collect browsing history, account information, analytics or telemetry.

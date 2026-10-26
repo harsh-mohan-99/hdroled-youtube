@@ -12,24 +12,34 @@
 <body>
   <main class="shell">
     <header class="header">
-      <div class="logo" aria-hidden="true"><span>H</span></div>
-      <div class="brand"><h1>HDROLED</h1><p>YOUTUBE ENHANCER</p></div>
-      <span class="version">v1.0</span>
+      <div class="logo" aria-hidden="true"><img src="icons/icon.svg" alt=""></div>
+      <div class="brand"><h1 class="sr-only">HDROLED</h1><img class="wordmark" src="icons/wordmark.svg" alt="" aria-hidden="true"><p>YOUTUBE ENHANCER</p></div>
+      <span class="version">v1.2 Lighter</span>
     </header>
-    <section class="hero" aria-label="Picture and sound enhancement">
-      <span class="eyebrow"><i aria-hidden="true"></i> PICTURE × SOUND</span>
-      <h2>Make every<br><em>frame hit.</em></h2>
-      <p>Depth in the picture. Presence in the sound.</p>
-      <span class="spark spark-one" aria-hidden="true">✦</span><span class="spark spark-two" aria-hidden="true">✦</span>
+    <section class="boosts" aria-label="Independent enhancement switches">
+      <button id="picture" class="boost picture-boost" type="button" aria-pressed="false" disabled>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4m2-14 1 2 2 1-2 1-1 2-1-2-2-1 2-1Z"/></svg>
+        <span class="boost-name">Display / video</span><span id="picture-state" class="switch-state">OFF</span>
+      </button>
+      <button id="sound" class="boost sound-boost" type="button" aria-pressed="false" disabled>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10h3l4-4v12l-4-4H4Zm11-1v6m4-9v12"/></svg>
+        <span class="boost-name">Sound boost</span><span id="sound-state" class="switch-state">OFF</span>
+      </button>
     </section>
-    <button id="enabled" class="enable" type="button" aria-pressed="false" disabled>
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v8M6.6 5.8a8.3 8.3 0 1 0 10.8 0"/></svg>
-      <span id="enabled-label">Enable HDROLED</span><span id="enabled-state">OFF</span>
-    </button>
+    <section class="strength-control" aria-label="Picture effect strength">
+      <div class="strength-heading"><label for="strength">Video boost opacity</label><output id="strength-value" for="strength">100%</output></div>
+      <input id="strength" type="range" min="0" max="100" step="1" value="100" aria-describedby="strength-hint" disabled>
+      <p id="strength-hint">0% original · 100% full HDROLED picture effect</p>
+    </section>
+    <section class="strength-control sound-control" aria-label="Sound boost strength">
+      <div class="strength-heading"><label for="sound-strength">Sound boost level</label><output id="sound-strength-value" for="sound-strength">100%</output></div>
+      <input id="sound-strength" type="range" min="0" max="100" step="1" value="100" aria-describedby="sound-strength-hint" disabled>
+      <p id="sound-strength-hint">0% original sound · 100% full boost</p>
+    </section>
     <section class="telemetry" aria-label="Current processing status" aria-live="polite">
       <div class="status-row"><span class="status-icon" aria-hidden="true">◈</span><div><h3>PICTURE</h3><p id="connection-title">Checking YouTube…</p></div><span id="picture-dot" class="dot" aria-hidden="true"></span></div>
       <p id="connection-detail" class="detail">Your saved switch is loading.</p>
-      <div class="status-row audio-row"><span class="status-icon sound-icon" aria-hidden="true">≋</span><div><h3>SOUND</h3><p id="audio-status">Waiting for player</p></div></div>
+      <div class="status-row audio-row"><span class="status-icon sound-icon" aria-hidden="true">≋</span><div><h3>SOUND</h3><p id="audio-status">Waiting for player</p></div><span id="sound-dot" class="dot" aria-hidden="true"></span></div>
       <div class="resolution"><span id="source-size">Resolution appears when connected</span></div>
     </section>
     <button id="compare" class="compare" type="button" aria-pressed="false" disabled><span aria-hidden="true">◐</span><span id="compare-label">Show original</span><span class="ab">A / B</span></button>

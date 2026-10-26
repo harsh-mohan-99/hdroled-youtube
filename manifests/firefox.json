@@ -1,13 +1,13 @@
 {
   "manifest_version": 3,
-  "name": "HDROLED — YouTube Picture & Sound",
-  "version": "1.0.0",
+  "name": "HDROLED — Lighter",
+  "version": "1.2.0",
   "description": "YouTube picture depth, fuller bass and clearer dialogue with one-click original comparison.",
   "permissions": [
     "storage"
   ],
   "action": {
-    "default_title": "HDROLED",
+    "default_title": "HDROLED · Lighter",
     "default_popup": "popup.html",
     "default_icon": {
       "16": "icons/icon-16.png",
